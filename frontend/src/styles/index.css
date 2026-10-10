@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --clinical-ink: #0D1520;
+    --clinical-canvas: #F4F7F5;
+    --clinical-panel: #FFFFFF;
+    --clinical-border: #DDE3DF;
+  }
+
+  body {
+    background-color: var(--clinical-canvas);
+    color: var(--clinical-ink);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Accessible focus indicators */
+  *:focus-visible {
+    outline: 2px solid #1A6352;
+    outline-offset: 2px;
+  }
+}
+
+/* Subtle, functional scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EAEFEB;
+}
+::-webkit-scrollbar-thumb {
+  background: #B6C2BC;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #889991;
+}
+
+/* Clinical input range customization */
+input[type="range"] {
+  accent-color: #1A6352;
+}
